@@ -2,9 +2,88 @@
     <div>Nome Completo: <input type="text" name="nmUser" id="nmUser" value="<%= movies.nmUser %>" autofocus></div>
     <div>E-mail: <input type="text" name="emUser" id="emUser" value="<%= movies.emUser %>"></div>
     <div>Senha: <input type="password" name="passUser" id="passUser" value="<%= movies.passUser %>"></div>
-    <div>CEP: <input type="text" name="fkCEP" id="fkCEP" value="<%= movies.fkCEP %>"></div>
+    <label>Cep:
+        <input name="CEP" type="text" id="cep" value="<%= movies.CEP %>" size="10" maxlength="9"/></label><br />
+    <label>Rua:
+        <input name="logradouro" type="text" id="rua" size="60" /></label><br />
     <div>Número: <input type="number" name="nrUser" id="nrUser" min="1" step="1" value="<%= movies.nrUser %>"></div>
     <div>Complemento: <input type="text" name="compUser" id="compUser" value="<%= movies.compUser %>"></div>
+    <label>Bairro:
+        <input name="bairro" type="text" id="bairro" size="40" value="<%= movies.bairro %>"/></label><br />
+    <label>Cidade:
+        <input name="cidade" type="text" id="cidade" size="40" value="<%= movies.cidade %>" /></label><br />
+    <label>Estado:
+        <input name="uf" type="text" id="uf" size="2" value="<%= movies.uf %>" /></label><br />
     <button>Salvar</button>
     <input type="hidden" value="<%= movies.idUser %>">
 </form>
+
+<!-- Adicionando JQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<!-- Adicionando Javascript -->
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        function limpa_formulário_cep() {
+            // Limpa valores do formulário de cep.
+            $("#rua").val("");
+            $("#bairro").val("");
+            $("#cidade").val("");
+            $("#uf").val("");
+            $("#ibge").val("");
+        }
+
+        //Quando o campo cep perde o foco.
+        $("#cep").blur(function() {
+
+            //Nova variável "cep" somente com dígitos.
+            var cep = $(this).val().replace(/\D/g, '');
+
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+
+                //Valida o formato do CEP.
+                if (validacep.test(cep)) {
+
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    $("#rua").val("...");
+                    $("#bairro").val("...");
+                    $("#cidade").val("...");
+                    $("#uf").val("...");
+                    $("#ibge").val("...");
+
+                    //Consulta o webservice viacep.com.br/
+                    $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
+
+                        if (!("erro" in dados)) {
+                            //Atualiza os campos com os valores da consulta.
+                            $("#rua").val(dados.logradouro);
+                            $("#bairro").val(dados.bairro);
+                            $("#cidade").val(dados.localidade);
+                            $("#uf").val(dados.uf);
+                            $("#ibge").val(dados.ibge);
+                        } //end if.
+                        else {
+                            //CEP pesquisado não foi encontrado.
+                            limpa_formulário_cep();
+                            alert("CEP não encontrado.");
+                        }
+                    });
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        });
+    });
+</script>

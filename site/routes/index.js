@@ -35,7 +35,8 @@ router.get('/form', function(req, res, next) {
 
 router.post('/form', function(req, res, next) {
     db.query('INSERT INTO tbUser SET ?', req.body, function(err, rs) {
-        res.send('Usuário inserido com sucesso!');
+        // alert('Usuário inserido com sucesso!');
+        res.redirect('/select');
     });
 });
 
