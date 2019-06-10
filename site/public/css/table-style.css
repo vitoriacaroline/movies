@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button {
+    font-family: "Century Gothic";
+}
+
+button {
+    height: 40px;
+}
+
+a button {
+    text-decoration: none;
+}
+
+#btn_cad {
+    margin-bottom: 20px;
+    background-color: rgba(61, 129, 223, 0.2);
+    width: 200px;
+}
+
+#rua {
+    width: 170px;
+}
+
+.btn {
+    border-radius: 5px;
+    border: solid 0.1px #b1b0b0;
+}
+
+.btn-acao1 {
+    background-color: red;
+    color: #ffffff;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.btn-acao2 {
+    background-color: yellow;
+    color: #000000;
+    width: 60px;
+}
+
+#tbCabecalho {
+    text-align: center;
+    border-bottom: 0.5px solid #b1b0b0;
+    border-top: 0.5px solid #b1b0b0;
+    font-weight: bold;
+    /* background-color: #174c97; */
+    /* color: #ffffff; */
+}
+
+table {
+    border-collapse: collapse;
+    border: 0.5px solid #b1b0b0;
+    width: 98%;
+}
+
+table,
+button {
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #3d80df;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: #edf5ff;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px;
+    border: dotted 0.5px #b1b0b0;
+}

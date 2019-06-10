@@ -1,17 +1,23 @@
-<h1>Todos os Usuários</h1>
+<link rel="stylesheet" href="css/table-style.css">
 
-<a href="/form">Novo Usuário</a>
+<h1>Usuários Cadastrados</h1>
+
+<a href="/form"><button id="btn_cad" type="button" class="btn">Cadastrar Novo Usuário</button></a>
 
 <table>
-    <tr>
-        <!-- TÍTULOS DAS COLUNAS (MESMO NOME QUE ESTÁ NO BANCO DE DADOS) -->
-        <td>Código do Usuário</td>
+    <tr id="tbCabecalho">
+        <td>Id</td>
         <td>Nome Completo</td>
         <td>E-mail</td>
-        <td>Senha</td>
-        <td>CEP</td>
+        <!-- <td>Senha</td>
+        <td>CEP</td> -->
+        <td style="width: 170px;">Logradouro</td>
         <td>Número</td>
         <td>Complemento</td>
+        <td>Bairro</td>
+        <td>Cidade</td>
+        <td>UF</td>
+        <td>Ação</td>
     </tr>
     <% movies.forEach(function(item) {%>
         <tr>
@@ -24,12 +30,12 @@
             <td>
                 <%= item.emUser %>
             </td>
-            <td>
+            <!-- <td>
                 <%= item.passUser %>
-            </td>
-            <td>
+            </td> -->
+            <!-- <td>
                 <%= item.CEP %>
-            </td>
+            </td> -->
             <td>
                 <%= item.logradouro %>
             </td>
@@ -50,8 +56,14 @@
                 <%= item.uf %>
             </td>
             <td>
-                <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
-                <a href="/update?idUser=<%= item.idUser %>">Editar</a>
+                <!-- <button type="button">
+                    <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
+                </button> -->
+                <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')"><button type="button" class="btn btn-acao1">Excluir</button></a>
+                <!-- <button>
+                    <a href="/update?idUser=<%= item.idUser %>">Editar</a>
+                </button> -->
+                <a href="/update?idUser=<%= item.idUser %>"><button type="button" class="btn btn-acao2">Editar</button></a>
             </td>
         </tr>
         <% }); %>

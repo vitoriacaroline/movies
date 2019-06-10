@@ -1,19 +1,14 @@
 <form method="POST">
-    <div>Nome Completo: <input type="text" name="nmUser" id="nmUser" value="<%= movies.nmUser %>" autofocus></div>
-    <div>E-mail: <input type="text" name="emUser" id="emUser" value="<%= movies.emUser %>"></div>
-    <div>Senha: <input type="password" name="passUser" id="passUser" value="<%= movies.passUser %>"></div>
-    <label>Cep:
-        <input name="CEP" type="text" id="cep" value="<%= movies.CEP %>" size="10" maxlength="9"/></label><br />
-    <label>Rua:
-        <input name="logradouro" type="text" id="rua" size="60" /></label><br />
-    <div>Número: <input type="number" name="nrUser" id="nrUser" min="1" step="1" value="<%= movies.nrUser %>"></div>
-    <div>Complemento: <input type="text" name="compUser" id="compUser" value="<%= movies.compUser %>"></div>
-    <label>Bairro:
-        <input name="bairro" type="text" id="bairro" size="40" value="<%= movies.bairro %>"/></label><br />
-    <label>Cidade:
-        <input name="cidade" type="text" id="cidade" size="40" value="<%= movies.cidade %>" /></label><br />
-    <label>Estado:
-        <input name="uf" type="text" id="uf" size="2" value="<%= movies.uf %>" /></label><br />
+    <div><input type="text" name="nmUser" id="nmUser" value="<%= movies.nmUser %>" placeholder="Nome Completo" autofocus></div>
+    <div><input type="email" name="emUser" id="emUser" value="<%= movies.emUser %>" placeholder="E-mail"></div>
+    <div><input type="password" name="passUser" id="passUser" value="<%= movies.passUser %>" placeholder="Senha"></div>
+    <div><input name="CEP" type="text" id="cep" value="<%= movies.CEP %>" size="10" maxlength="9" placeholder="CEP" /></label><br /></div>
+    <div><input name="logradouro" type="text" id="rua" size="60" placeholder="Rua" /></div>
+    <div><input type="number" name="nrUser" id="nrUser" min="1" step="1" value="<%= movies.nrUser %>" placeholder="Número"></div>
+    <div><input type="text" name="compUser" id="compUser" value="<%= movies.compUser %>" placeholder="Complemento"></div>
+    <div><input name="bairro" type="text" id="bairro" size="40" value="<%= movies.bairro %>" placeholder="Bairro" /></div>
+    <div><input name="cidade" type="text" id="cidade" size="40" value="<%= movies.cidade %>" placeholder="Cidade" /></div>
+    <div><input name="uf" type="text" id="uf" size="2" value="<%= movies.uf %>" placeholder="Estado" /></div>
     <button>Salvar</button>
     <input type="hidden" value="<%= movies.idUser %>">
 </form>
