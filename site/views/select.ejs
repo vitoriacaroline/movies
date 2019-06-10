@@ -1,0 +1,45 @@
+<h1>Todos os Usuários</h1>
+
+<a href="/form">Novo Usuário</a>
+
+<table>
+    <tr>
+        <!-- TÍTULOS DAS COLUNAS (MESMO NOME QUE ESTÁ NO BANCO DE DADOS) -->
+        <td>idUser</td>
+        <td>nmUser</td>
+        <td>emUser</td>
+        <td>passUser</td>
+        <td>fkCEP</td>
+        <td>nrUser</td>
+        <td>compUser</td>
+    </tr>
+    <% movies.forEach(function(item) {%>
+        <tr>
+            <td>
+                <%= item.idUser %>
+            </td>
+            <td>
+                <%= item.nmUser %>
+            </td>
+            <td>
+                <%= item.emUser %>
+            </td>
+            <td>
+                <%= item.passUser %>
+            </td>
+            <td>
+                <%= item.fkCEP %>
+            </td>
+            <td>
+                <%= item.nrUser %>
+            </td>
+            <td>
+                <%= item.compUser %>
+            </td>
+            <td>
+                <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
+                <a href="/update?idUser=<%= item.idUser %>">Editar</a>
+            </td>
+        </tr>
+        <% }); %>
+</table>
