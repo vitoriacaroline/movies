@@ -8,6 +8,31 @@ button {
     font-family: "Century Gothic";
 }
 
+#btn_novo {
+    float: right;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#h1_cad {
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+#div_table {
+    width: 1320px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
 button {
     height: 40px;
 }
@@ -35,7 +60,6 @@ a button {
     background-color: red;
     color: #ffffff;
     width: 60px;
-    margin-right: 10px;
 }
 
 .btn-acao2 {
@@ -56,7 +80,7 @@ a button {
 table {
     border-collapse: collapse;
     border: 0.5px solid #b1b0b0;
-    width: 98%;
+    width: 1300px;
 }
 
 table,
@@ -85,6 +109,32 @@ th {
 
 th,
 td {
-    padding: 12px;
+    padding: 5px;
     border: dotted 0.5px #b1b0b0;
+}
+
+/* LARGURA DAS COLUNAS */
+
+#td12 {
+    width: 140px;
+}
+
+#td1, #td7, #td11 {
+    width: 30px;
+}
+
+#td2, #td3, #td6 {
+    width: 170px;
+}
+
+#td4, #td5, #td8 {
+    width: 60px;
+}
+
+#td10 {
+    width: 90px;
+}
+
+#td9 {
+    width: 100px;
 }

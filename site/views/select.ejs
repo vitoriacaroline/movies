@@ -1,70 +1,76 @@
 <link rel="stylesheet" href="css/table-style.css">
 
-<h1>Usuários Cadastrados</h1>
+<div id="h1_cad">
+    <h1>Clientes Cadastrados</h1>
+</div>
 
-<a href="/form"><button id="btn_cad" type="button" class="btn">Cadastrar Novo Usuário</button></a>
+<div id="btn_novo">
+    <a href="/form"><button id="btn_cad" type="button" class="btn">Cadastrar Novo Cliente</button></a>
+</div>
 
-<table>
-    <tr id="tbCabecalho">
-        <td>Id</td>
-        <td>Nome Completo</td>
-        <td>E-mail</td>
-        <!-- <td>Senha</td>
-        <td>CEP</td> -->
-        <td style="width: 170px;">Logradouro</td>
-        <td>Número</td>
-        <td>Complemento</td>
-        <td>Bairro</td>
-        <td>Cidade</td>
-        <td>UF</td>
-        <td>Ação</td>
-    </tr>
-    <% movies.forEach(function(item) {%>
-        <tr>
-            <td>
-                <%= item.idUser %>
-            </td>
-            <td>
-                <%= item.nmUser %>
-            </td>
-            <td>
-                <%= item.emUser %>
-            </td>
-            <!-- <td>
-                <%= item.passUser %>
-            </td> -->
-            <!-- <td>
-                <%= item.CEP %>
-            </td> -->
-            <td>
-                <%= item.logradouro %>
-            </td>
-            <td>
-                <%= item.nrUser %>
-            </td>
-            <td>
-                <%= item.compUser %>
-            </td>
-
-            <td>
-                <%= item.bairro %>
-            </td>
-            <td>
-                <%= item.cidade %>
-            </td>
-            <td>
-                <%= item.uf %>
-            </td>
-            <td>
-                <!-- <button type="button">
-                    <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
-                </button> -->
-                <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')"><button type="button" class="btn btn-acao1">Excluir</button></a>
-                <!-- <button>
-                    <a href="/update?idUser=<%= item.idUser %>">Editar</a>
-                </button> -->
-                <a href="/update?idUser=<%= item.idUser %>"><button type="button" class="btn btn-acao2">Editar</button></a>
-            </td>
+<div id="div_table">
+    <table>
+        <tr id="tbCabecalho">
+            <td id="td1">Id</td>
+            <td id="td2">Nome</td>
+            <td id="td3">E-mail</td>
+            <td id="td4">Senha</td>
+            <td id="td5">CEP</td>
+            <td id="td6">Logradouro</td>
+            <td id="td7">Nº</td>
+            <td id="td8">Compl</td>
+            <td id="td9">Bairro</td>
+            <td id="td10">Cidade</td>
+            <td id="td11">UF</td>
+            <td id="td12">Ação</td>
         </tr>
-        <% }); %>
-</table>
+        <% movies.forEach(function(item) {%>
+            <tr>
+                <td>
+                    <%= item.idUser %>
+                </td>
+                <td>
+                    <%= item.nmUser %>
+                </td>
+                <td>
+                    <%= item.emUser %>
+                </td>
+                <td>
+                    <%= item.passUser %>
+                </td>
+                <td>
+                    <%= item.CEP %>
+                </td>
+                <td>
+                    <%= item.logradouro %>
+                </td>
+                <td>
+                    <%= item.nrUser %>
+                </td>
+                <td>
+                    <%= item.compUser %>
+                </td>
+
+                <td>
+                    <%= item.bairro %>
+                </td>
+                <td>
+                    <%= item.cidade %>
+                </td>
+                <td>
+                    <%= item.uf %>
+                </td>
+                <td style="text-align: center;">
+                    <!-- <button type="button">
+                        <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
+                    </button> -->
+                    <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja excluir este registro?')"><button type="button" class="btn btn-acao1">Excluir</button></a>
+                    <!-- <button>
+                        <a href="/update?idUser=<%= item.idUser %>">Editar</a>
+                    </button> -->
+                    <a href="/update?idUser=<%= item.idUser %>"><button type="button" class="btn btn-acao2">Editar</button></a>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+</div>
