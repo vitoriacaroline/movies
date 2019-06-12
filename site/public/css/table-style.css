@@ -6,6 +6,7 @@
 body,
 button {
     font-family: "Century Gothic";
+    /* background-color: rgba(61, 129, 223, 0.2); */
 }
 
 #btn_novo {
@@ -113,21 +114,28 @@ td {
     border: dotted 0.5px #b1b0b0;
 }
 
+
 /* LARGURA DAS COLUNAS */
 
 #td12 {
     width: 140px;
 }
 
-#td1, #td7, #td11 {
+#td1,
+#td7,
+#td11 {
     width: 30px;
 }
 
-#td2, #td3, #td6 {
+#td2,
+#td3,
+#td6 {
     width: 170px;
 }
 
-#td4, #td5, #td8 {
+#td4,
+#td5,
+#td8 {
     width: 60px;
 }
 

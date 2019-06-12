@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Locadora</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Century Gothic';
+        }
+        
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .acao {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 0.5px dotted rgba(128, 128, 128, 0.589);
+            border-radius: 5px;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+            padding-top: 35px;
+        }
+        /* #ver_filmes {
+            position: relative;
+            float: right;
+        }
+        
+        #cad_user {
+            position: relative;
+            float: left;
+        } */
+        
+        button {
+            width: 70%;
+            position: relative;
+            background-color: rgba(61, 129, 223, 0.637);
+            border: solid 0.5px rgba(61, 129, 223, 0.637);
+            height: 40px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-family: 'Century Gothic';
+        }
+        
+        #principal {
+            display: flex;
+            margin-top: 100px;
+            margin-left: 170px;
+            width: 1000px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center; align-items: center; background-color: rgba(61, 129, 223, 0.2);">
+    <div>
+        <h1 style="margin-left: 100px; margin-top: 50px;">Locadora Blockbuster</h1>
+    </div>
+    <div>
+        <div id="principal">
+            <div id="cad_user" class="acao" style="margin:auto;">
+                <img src="img/woman.png" alt="Usuária">
+                <br>
+                <div>
+                    <a href="/form"><button>Cadastrar</button></a>
+                </div>
+            </div>
+            <div id="ver_users" class="acao" style="margin:auto;">
+                <img src="img/team.png" alt="Usuários">
+                <br>
+                <div>
+                    <a href="/select"><button>Ver Usuários</button></a>
+                </div>
+            </div>
+            <div id="ver_filmes" class="acao" style="margin:auto;">
+                <img src="img/video-camera.png" alt="Vídeo Câmera">
+                <br>
+                <div>
+                    <a href="lista_filmes.html"><button>Ver Filmes</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

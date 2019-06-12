@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="css/table-style.css">
 
-<div id="h1_cad">
+<div id="h1_cad" style="margin-top: 50px; margin-bottom: 20px">
     <h1>Clientes Cadastrados</h1>
 </div>
 
-<div id="btn_novo">
+<div id="btn_novo" style="margin-top: 50px; margin-bottom: 20px">
     <a href="/form"><button id="btn_cad" type="button" class="btn">Cadastrar Novo Cliente</button></a>
 </div>
 
@@ -22,7 +22,7 @@
             <td id="td9">Bairro</td>
             <td id="td10">Cidade</td>
             <td id="td11">UF</td>
-            <td id="td12">Ação</td>
+            <td id="td12">Opções</td>
         </tr>
         <% movies.forEach(function(item) {%>
             <tr>
@@ -61,14 +61,14 @@
                     <%= item.uf %>
                 </td>
                 <td style="text-align: center;">
-                    <!-- <button type="button">
-                        <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
-                    </button> -->
-                    <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja excluir este registro?')"><button type="button" class="btn btn-acao1">Excluir</button></a>
                     <!-- <button>
                         <a href="/update?idUser=<%= item.idUser %>">Editar</a>
                     </button> -->
                     <a href="/update?idUser=<%= item.idUser %>"><button type="button" class="btn btn-acao2">Editar</button></a>
+                    <!-- <button type="button">
+                        <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja exluir este registro?')">Excluir</a>
+                    </button> -->
+                    <a href="/delete?idUser=<%= item.idUser %>" onclick="return confirm('Você tem certeza de que deseja excluir este registro?')"><button type="button" class="btn btn-acao1">Excluir</button></a>
                 </td>
             </tr>
             <% }); %>

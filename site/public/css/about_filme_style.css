@@ -1,0 +1,32 @@
+.container {
+    font-family: 'Century Gothic';
+    width: 100vw;
+    height: 100vh;
+    background: rgba(61, 129, 223, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.box {
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Century Gothic';
+}
+
+.container .box button {
+    font-family: 'Century Gothic';
+    height: 40px;
+    border-radius: 5px;
+    border: solid 0.5px #000000;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
