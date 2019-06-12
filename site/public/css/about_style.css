@@ -1,0 +1,136 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    background-color: rgba(191, 141, 145, 1);
+}
+
+.img-radius {
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+
+/* NAV-BAR (MENU) */
+
+header nav ul {
+    margin: 0;
+    /* background-color: #000000; */
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 60px;
+    color: #ffffff;
+    /* color: #C73295; */
+    position: relative;
+    align-items: right;
+}
+
+hr {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* color: #ffffff; */
+    /* background-color: #ffffff; */
+    border-color: #ffffff;
+}
+
+.margin-nav {
+    margin-top: 7px;
+}
+
+header nav ul li {
+    list-style-type: none;
+    width: 7%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    float: left;
+}
+
+hr {
+    width: 80%;
+}
+
+.top {
+    margin-top: 7%;
+}
+
+.top2 {
+    margin-top: 4%;
+}
+
+#li_home {
+    margin-left: 60%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+#index_content h3 a:hover {
+    color: #ffffff;
+}
+
+div p strong a {
+    text-decoration: none;
+    color: #000000;
+}
+
+div p strong a:hover {
+    color: #ffffff;
+}
+
+#div_about {
+    position: fixed;
+    margin-left: 9.5%;
+    margin-right: 9.5%;
+    width: 80%;
+    height: 450px;
+    border-radius: 20px;
+    border: solid 0.5px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Century Gothic';
+}
+
+#div_about_2 {
+    position: relative;
+    margin-left: 5%;
+    width: 40%;
+    height: 100%;
+    float: left;
+    /* background-color: orange; */
+}
+
+#div_about_3 {
+    position: relative;
+    margin-right: 5%;
+    margin-top: 5%;
+    width: 45%;
+    height: 100%;
+    float: right;
+    /* background-color: purple; */
+}
+
+#div_about_3 ul li {
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.back {
+    background-color: rgba(255, 255, 255, 0.2);
+}
