@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Century Gothic';
+}
+
+body {
+    text-align: center;
+    align-items: center;
+    background-color: rgba(61, 129, 223, 0.2);
+}
+
+#titulo {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.acao {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0.5px dotted rgba(128, 128, 128, 0.589);
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+
+/*#ver_filmes {
+            position: relative;
+            float: right;
+        }*/
+
+#cad_user,
+#ver_users,
+#ver_filmes {
+    /*position: relative;
+            float: left;*/
+    margin: auto;
+}
+
+button {
+    width: 70%;
+    position: relative;
+    background-color: rgba(61, 129, 223, 0.637);
+    border: solid 0.5px rgba(61, 129, 223, 0.637);
+    height: 40px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Century Gothic';
+}
+
+#principal {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 170px;
+    width: 1000px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
